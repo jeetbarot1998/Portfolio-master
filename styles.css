@@ -3,65 +3,6 @@ html {
     -webkit-text-size-adjust: 100%;
 }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding: 2rem 0;
-}
-
-.project-card {
-    background: rgba(255, 255, 255, 0.05);
-    padding: 1.5rem;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.project-card:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.project-card h3 {
-    color: white;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
-.project-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-}
-
-.project-card p {
-    color: #ccc;
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
-}
-
-.tech-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-}
-
-.tech-tags span {
-    background: rgba(97, 218, 251, 0.2);
-    color: #61dafb;
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-}
-
-@media (max-width: 768px) {
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 
 /* Portfolio Grid Styles */
 .portfolio-grid {
@@ -83,10 +24,6 @@ html {
     height: 100%;
 }
 
-.project-card:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
 .project-card h3 {
     color: white;
     font-size: 1.4rem;
@@ -104,7 +41,7 @@ html {
 }
 
 .award {
-    color: #ffd700 !important;
+    color: #ffd700;
 }
 
 .project-card p {
@@ -114,46 +51,65 @@ html {
     flex-grow: 1;
 }
 
-/* Tech Tags */
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .tech-tags span {
-    background: rgba(97, 218, 251, 0.2);
+    background: rgba(97, 218, 251, 0.1);
     color: #61dafb;
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    white-space: nowrap;
-}
-
-/* Publication Link Styles */
-.publication-link-wrapper {
-    margin-top: auto;
-    padding-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
 }
 
 .publication-link {
+    color: #61dafb;
+    text-decoration: none;
+    font-size: 0.9rem;
     display: inline-flex;
     align-items: center;
-    color: #61dafb;
-    text-decoration: underline;
-    font-size: 0.9rem;
-    padding: 0.5rem 0;
-    transition: color 0.3s ease;
-}
-
-.publication-link:hover {
-    color: #fff;
+    margin-top: auto;
+    padding-bottom: 2px;
 }
 
 .external-link-icon {
     margin-left: 0.5rem;
-    font-size: 1.1em;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .project-card {
+        padding: 1.5rem;
+    }
+    
+    .tech-tags span {
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@supports (-webkit-touch-callout: none) {
+    .project-card {
+        background: rgba(22, 28, 36, 0.7);
+        border: 1px solid rgba(97, 218, 251, 0.1);
+    }
+    
+    .tech-tags span {
+        background: rgba(22, 28, 36, 0.9);
+        border: 1px solid rgba(97, 218, 251, 0.2);
+    }
+    
+    .publication-link {
+        padding: 0.5rem 0;
+        width: fit-content;
+    }
 }
 
 /* Mobile Responsiveness */
