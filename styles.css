@@ -63,6 +63,7 @@ html {
 }
 
 
+/* Portfolio Grid Styles */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -113,11 +114,12 @@ html {
     flex-grow: 1;
 }
 
+/* Tech Tags */
 .tech-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
-    margin-top: auto;
+    margin-bottom: 1rem;
 }
 
 .tech-tags span {
@@ -129,24 +131,60 @@ html {
     white-space: nowrap;
 }
 
-.link-tag {
-    background: rgba(255, 255, 255, 0.1);
-    color: white;
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
+/* Publication Link Styles */
+.publication-link-wrapper {
+    margin-top: auto;
+    padding-top: 0.5rem;
 }
 
-.link-tag:hover {
-    background: rgba(255, 255, 255, 0.2);
+.publication-link {
+    display: inline-flex;
+    align-items: center;
+    color: #61dafb;
+    text-decoration: underline;
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s ease;
 }
 
-@media (max-width: 768px) {
+.publication-link:hover {
+    color: #fff;
+}
+
+.external-link-icon {
+    margin-left: 0.5rem;
+    font-size: 1.1em;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
     .portfolio-grid {
         grid-template-columns: 1fr;
         padding: 1rem;
+    }
+
+    .project-card {
+        padding: 1.25rem;
+    }
+
+    .publication-link {
+        padding: 0.75rem 0;
+    }
+}
+
+/* iOS Specific Styles */
+@supports (-webkit-touch-callout: none) {
+    .project-card {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .publication-link-wrapper {
+        padding: 0.5rem 0;
+    }
+
+    .publication-link {
+        -webkit-touch-callout: none;
+        padding: 0.75rem 0;
     }
 }
 
